@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:text="Done with Pride an Prejudice by Stoica Dan Cristian"
         android:layout_centerInParent="true"
-
+        android:id="@+id/text"
         />
     <Button
         android:layout_width="200dp"
@@ -33,7 +33,7 @@
         android:background="#ff8e848d"
         android:textColor="#fff"
         android:textSize="20dp"
-
+        android:id="@+id/buttonsecond"
 
 
         />
