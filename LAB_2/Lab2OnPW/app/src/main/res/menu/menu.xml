@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/changeButtonText"
+        android:title="Change button text."/>
+
+    <item
+        android:id="@+id/changeTextBackground"
+        android:title="Change button background."/>
+
+    <item
+        android:id="@+id/changeBackgroundColor"
+        android:title="Change Background."/>
+</menu>
