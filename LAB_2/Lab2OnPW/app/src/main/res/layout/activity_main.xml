@@ -7,12 +7,21 @@
     android:id="@+id/main">
 
     <Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:text="Show Dialog"
+    android:textAllCaps="false"
+    android:id="@+id/button1"/>
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Show Dialog"
+
+        android:text="Open Keyboard"
         android:textAllCaps="false"
-        android:id="@+id/button1"/>
+        android:id="@+id/button2"
+        android:layout_marginTop="170dp"
+        android:layout_marginLeft="133dp"/>
 
 
 

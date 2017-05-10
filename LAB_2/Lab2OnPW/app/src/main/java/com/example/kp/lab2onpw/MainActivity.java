@@ -1,14 +1,17 @@
 package com.example.kp.lab2onpw;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.Color;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 
@@ -17,7 +20,22 @@ import java.util.Random;
 public class MainActivity extends AppCompatActivity {
     Button button1;
     RelativeLayout main;
+    Button button2;
+    @Override
+    public boolean onKeyUp(int keyCode, KeyEvent event) {
+        switch(keyCode){
+            case KeyEvent.KEYCODE_Q:
+                button2.setBackgroundColor(0xff002349);
 
+                break;
+            case KeyEvent.KEYCODE_W:
+                button2.setText("Changed Text");
+
+                break;
+        }
+
+        return true;
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater=getMenuInflater();
@@ -54,7 +72,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         button1=(Button)findViewById(R.id.button1);
+        button2=(Button)findViewById(R.id.button2);
         main=(RelativeLayout)findViewById(R.id.main);
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                InputMethodManager inputMethodManager=(InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+
+                inputMethodManager.toggleSoftInput(InputMethodManager.SHOW_FORCED,0);
+
+            }
+        });
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
