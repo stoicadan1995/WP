@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.kp.lab_3.MainActivity">
+
+    <com.example.kp.lab_3.DrawView
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        />
+    <com.example.kp.lab_3.DrawView2
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="25dp"
+        />
+    <com.example.kp.lab_3.DrawView3
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="40dp"/>
+    <com.example.kp.lab_3.DrawView4
+        android:layout_width="30dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="105dp"/>
+    <com.example.kp.lab_3.DrawView5
+        android:layout_width="30dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="115dp"
+        android:layout_marginTop="5dp"/>
+    <com.example.kp.lab_3.BezierDrawView1
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="50dp"/>
+    <com.example.kp.lab_3.BezierDrawView2
+        android:layout_width="50dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="200dp"/>
+
+</RelativeLayout>
