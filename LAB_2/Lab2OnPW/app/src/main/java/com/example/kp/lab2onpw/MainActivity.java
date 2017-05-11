@@ -12,15 +12,25 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.RelativeLayout;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
     Button button1;
     RelativeLayout main;
     Button button2;
+
+    List<Integer> sizes = new ArrayList<>();
+
+    ListView listView;
+    Adapter adapter;
+
     @Override
     public boolean onKeyUp(int keyCode, KeyEvent event) {
         switch(keyCode){
@@ -71,6 +81,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        for(int i = 0; i < 50; i++){
+            sizes.add(150 + i);
+        }
+
+        listView = (ListView) findViewById(R.id.listView);
+        adapter = new Adapter(this);
+        adapter.setData(sizes);
+        listView.setAdapter(adapter);
+
         button1=(Button)findViewById(R.id.button1);
         button2=(Button)findViewById(R.id.button2);
         main=(RelativeLayout)findViewById(R.id.main);
@@ -103,6 +123,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                button2.setWidth(sizes.get(position));
+            }
+        });
 
     }
 }
