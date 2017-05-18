@@ -40,8 +40,8 @@
         android:layout_marginTop="200dp"
         android:layout_marginLeft="200dp"/>
     <com.example.kp.lab_3.CircleDrawView
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_marginTop="75dp"/>
     <com.example.kp.lab_3.OvalDrawView
         android:layout_width="175dp"
@@ -55,5 +55,12 @@
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:layout_marginTop="400dp"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next page."
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/firstbutton"/>
 
 </RelativeLayout>
